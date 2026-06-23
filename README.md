@@ -1,2 +1,9 @@
-# mukesh-rhel-10-reference-guide
-My RHEL 10 Reference Guide
+# rhel-10-reference-guide
+
+My RHEL 10 Reference Guide.
+
+## Featured Guide
+
+- [RHCL / RHCSA EX200 Practice Questions (RHEL 10 Style)](./ex200-practice-guide.md)
+
+This guide is written in a clean, beginner-friendly format so it can be reused on GitHub, blogs, and platforms like Medium with minimal edits.
