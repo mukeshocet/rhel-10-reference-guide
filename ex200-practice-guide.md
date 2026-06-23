@@ -837,6 +837,9 @@ su - <username> -c "flatpak remotes --user"
 ## Q25) Script That Prints Second Argument Then First
 ⬆️ [Back to top](#table-of-contents)
 
+### Exam note
+Optional practice only. This exact script pattern is not expected in the exam; real exam scripting tasks are usually simpler.
+
 ### `/script.sh`
 ```bash
 #!/bin/bash

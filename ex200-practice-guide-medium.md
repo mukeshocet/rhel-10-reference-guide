@@ -416,6 +416,8 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 ## 25) Script Argument Order
 ⬆️ [Back to top](#jump-to-topic)
 
+Optional: this exact pattern is unlikely to appear in the exam. Actual exam script tasks are generally easier.
+
 ```bash
 #!/bin/bash
 if [ $# -eq 2 ]; then
