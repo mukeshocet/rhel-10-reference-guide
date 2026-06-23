@@ -153,7 +153,16 @@ Use the same style everywhere to avoid confusion:
 ### Goal
 Configure network settings and hostname for your servers.
 
-### Useful commands
+### Recommended method
+Use `nmtui` for the fastest and most exam-friendly way to configure network settings with a text UI:
+
+```bash
+nmtui
+```
+
+### Helpful CLI commands (optional)
+Use these commands to identify the connected device or configure from the command line with `nmcli` when needed:
+
 ```bash
 nmcli connection show
 ip a

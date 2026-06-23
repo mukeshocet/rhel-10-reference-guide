@@ -91,6 +91,14 @@ Each section is independent, so you can revise fast even when you only have 10-1
 ## 1) Network and Hostname
 ⬆️ [Back to top](#jump-to-topic)
 
+Recommended: use `nmtui` to configure networking with the text UI.
+
+```bash
+nmtui
+```
+
+Use the commands below to find the connected device or configure networking from the command line with `nmcli` when required:
+
 ```bash
 nmcli connection show
 ip a
