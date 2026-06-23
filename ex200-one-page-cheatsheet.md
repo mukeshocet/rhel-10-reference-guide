@@ -213,7 +213,13 @@ systemctl list-timers
 
 ```bash
 dnf install -y flatpak
+
+# System-wide remote
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# User-only remote
+su - <username>
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ## 25) reverse args script
