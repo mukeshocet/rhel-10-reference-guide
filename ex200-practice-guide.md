@@ -57,6 +57,49 @@
 
 ---
 
+## Badge Legend
+
+- `🟢 Beginner` = direct, low-risk tasks
+- `🟡 Intermediate` = multi-step tasks or service config
+- `🔴 Exam-Critical` = commonly tested, easy to lose marks if missed
+- `⏱️` = estimated hands-on practice time
+
+---
+
+## Practice Planner (Difficulty + Time)
+
+| Question | Topic | Difficulty | Time |
+| --- | --- | --- | --- |
+| Q1 | Network + Hostname | 🟡 Intermediate | ⏱️ 10-15 min |
+| Q2 | Repositories | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Q3 | HTTP + SELinux + Firewall | 🔴 Exam-Critical | ⏱️ 12-18 min |
+| Q4 | Users + Groups | 🟢 Beginner | ⏱️ 8-10 min |
+| Q5 | Shared Directory (SGID) | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Q6 | NFS + autofs | 🔴 Exam-Critical | ⏱️ 15-20 min |
+| Q7 | Cron + deny | 🟢 Beginner | ⏱️ 5-8 min |
+| Q8 | ACL | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Q9 | Chrony/NTP | 🟡 Intermediate | ⏱️ 6-10 min |
+| Q10 | find + copy | 🟢 Beginner | ⏱️ 5-8 min |
+| Q11 | user with UID | 🟢 Beginner | ⏱️ 3-5 min |
+| Q12 | tar backup | 🟢 Beginner | ⏱️ 3-5 min |
+| Q13 | umask | 🟡 Intermediate | ⏱️ 5-8 min |
+| Q14 | password expiry | 🟡 Intermediate | ⏱️ 5-8 min |
+| Q15 | sudoers | 🔴 Exam-Critical | ⏱️ 5-8 min |
+| Q16 | shell script | 🟡 Intermediate | ⏱️ 8-12 min |
+| Q17 | root reset flow | 🔴 Exam-Critical | ⏱️ 10-15 min |
+| Q18 | swap partition | 🔴 Exam-Critical | ⏱️ 10-15 min |
+| Q19 | LVM create + mount | 🔴 Exam-Critical | ⏱️ 12-18 min |
+| Q21 | LVM extend | 🔴 Exam-Critical | ⏱️ 6-10 min |
+| Q22 | tuned | 🟢 Beginner | ⏱️ 4-6 min |
+| Q24 | systemd timer | 🟡 Intermediate | ⏱️ 10-15 min |
+| Q24-flatpak | flatpak remote | 🟢 Beginner | ⏱️ 4-6 min |
+| Q25 | argument script | 🟢 Beginner | ⏱️ 5-8 min |
+| Q26 | /etc/skel | 🟢 Beginner | ⏱️ 4-6 min |
+| Q27 | password policy | 🟡 Intermediate | ⏱️ 6-10 min |
+| Q28 | SSH key login | 🔴 Exam-Critical | ⏱️ 8-12 min |
+
+---
+
 ## Before You Start
 
 - Practice on lab VMs (for example: `servera.lab.example.com`, `serverb.lab.example.com`)

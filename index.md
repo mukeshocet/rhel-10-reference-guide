@@ -2,6 +2,10 @@
 
 Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX200-style tasks.
 
+![Level: Beginner Friendly](https://img.shields.io/badge/level-beginner_friendly-brightgreen)
+![Focus: EX200 Practice](https://img.shields.io/badge/focus-EX200_practice-blue)
+![Format: GitHub + Medium](https://img.shields.io/badge/format-GitHub%20%2B%20Medium-orange)
+
 ## Start Here
 
 - [EX200 Practice Guide (Detailed)](./ex200-practice-guide.md)
@@ -25,3 +29,9 @@ Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX2
 
 - [Detailed guide with verification + FAQ](./ex200-practice-guide.md)
 - [Short guide for quick revisions](./ex200-practice-guide-medium.md)
+
+## Learning Path by Time
+
+- **10 minutes:** revise 1 beginner section from the Medium guide
+- **30 minutes:** complete one topic group (for example users + permissions)
+- **60+ minutes:** simulate mini-exam with 4-6 mixed tasks

@@ -47,6 +47,25 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 ---
 
+## Badge Legend
+
+- `🟢` Beginner
+- `🟡` Intermediate
+- `🔴` Exam-Critical
+- `⏱️` Estimated practice time
+
+## Fast Practice Planner
+
+| Topic Group | Difficulty | Time |
+| --- | --- | --- |
+| Network/Repos/Web (Q1-Q3) | 🔴 | ⏱️ 30-45 min |
+| Users/Permissions/ACL (Q4-Q8) | 🔴 | ⏱️ 30-40 min |
+| Time/Find/Archive/Policy (Q9-Q15) | 🟡 | ⏱️ 35-50 min |
+| Scripting/Recovery/Storage (Q16-Q21) | 🔴 | ⏱️ 45-60 min |
+| tuned/systemd/flatpak/SSH (Q22-Q28) | 🟡 | ⏱️ 35-45 min |
+
+---
+
 ## 1) Network and Hostname
 
 ```bash
