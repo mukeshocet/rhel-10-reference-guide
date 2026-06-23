@@ -72,7 +72,24 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 ---
 
+## Practice Mode A/B/C
+
+### Mode A (15-20 min)
+- 1 beginner section
+- 1 verification check
+
+### Mode B (35-45 min)
+- 2 exam-critical sections
+- quick review of common mistakes
+
+### Mode C (60-90 min)
+- 4-6 mixed sections as mini mock
+- one final pass through the cheatsheet
+
+---
+
 ## 1) Network and Hostname
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 nmcli connection show
@@ -86,6 +103,7 @@ hostnamectl set-hostname <hostname>
 ---
 
 ## 2) Repository Configuration (BaseOS/AppStream)
+⬆️ [Back to top](#jump-to-topic)
 
 ```ini
 [BaseOS]
@@ -111,6 +129,7 @@ dnf search httpd
 ---
 
 ## 3) HTTP on Port 82
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 dnf install -y httpd
@@ -124,6 +143,7 @@ curl http://localhost:82
 ---
 
 ## 4) Users and Groups
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 groupadd admin
@@ -138,6 +158,7 @@ passwd sarah
 ---
 
 ## 5) Shared Directory with SGID
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 mkdir -p /common/admin
@@ -149,6 +170,7 @@ chmod g+s /common/admin
 ---
 
 ## 6) NFS Auto-mount with Timeout
+⬆️ [Back to top](#jump-to-topic)
 
 `/etc/auto.master`
 ```text
@@ -168,6 +190,7 @@ systemctl enable --now autofs
 ---
 
 ## 7) Cron + Deny User
+⬆️ [Back to top](#jump-to-topic)
 
 Crontab:
 ```cron
@@ -182,6 +205,7 @@ echo natasha >> /etc/cron.deny
 ---
 
 ## 8) ACL Task
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 cp /etc/fstab /var/tmp/
@@ -193,6 +217,7 @@ getfacl /var/tmp/fstab
 ---
 
 ## 9) NTP / Chrony
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 dnf install -y chrony
@@ -205,6 +230,7 @@ timedatectl
 ---
 
 ## 10) Find Files >4MB and Copy
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 mkdir -p /find/largefiles
@@ -214,6 +240,7 @@ find /etc -type f -size +4M -exec cp {} /find/largefiles/ \;
 ---
 
 ## 11) User with UID
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 useradd -u 6969 billy
@@ -223,6 +250,7 @@ passwd billy
 ---
 
 ## 12) Archive and Compress
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 tar -zcvf /root/ex200.tar.gz /var/tmp
@@ -231,6 +259,7 @@ tar -zcvf /root/ex200.tar.gz /var/tmp
 ---
 
 ## 13) UMASK
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 su - natasha
@@ -240,6 +269,7 @@ umask 0277
 ---
 
 ## 14) Password Expiry for New Users
+⬆️ [Back to top](#jump-to-topic)
 
 `/etc/login.defs`
 ```text
@@ -249,6 +279,7 @@ PASS_MAX_DAYS 20
 ---
 
 ## 15) Passwordless sudo for admin Group
+⬆️ [Back to top](#jump-to-topic)
 
 ```text
 %admin ALL=(ALL) NOPASSWD: ALL
@@ -257,6 +288,7 @@ PASS_MAX_DAYS 20
 ---
 
 ## 16) Script Practice
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 #!/bin/bash
@@ -266,6 +298,7 @@ find /usr/share -type f -size -1M -exec cp -a {} /root/find \;
 ---
 
 ## 17) Root Password Reset (Recovery)
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 passwd root
@@ -276,6 +309,7 @@ exec /sbin/init
 ---
 
 ## 18) 512MB Swap
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 lsblk
@@ -287,6 +321,7 @@ swapon -a
 ---
 
 ## 19) LVM with Extents
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 pvcreate /dev/sdb2
@@ -298,6 +333,7 @@ mkfs.ext4 /dev/datastore/database
 ---
 
 ## 21) Extend LV by 100 Extents
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 lvextend -l +100 -r /dev/datastore/database
@@ -306,6 +342,7 @@ lvextend -l +100 -r /dev/datastore/database
 ---
 
 ## 22) tuned Profile
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 dnf install -y tuned
@@ -317,6 +354,7 @@ tuned-adm active
 ---
 
 ## 24) systemd Timer
+⬆️ [Back to top](#jump-to-topic)
 
 ```ini
 [Timer]
@@ -332,6 +370,7 @@ systemctl enable --now testtimer.timer
 ---
 
 ## 24) Flatpak Remote
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 dnf install -y flatpak
@@ -341,6 +380,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ---
 
 ## 25) Script Argument Order
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 #!/bin/bash
@@ -355,6 +395,7 @@ fi
 ---
 
 ## 26) Default File for New Users
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 touch /etc/skel/Congrats
@@ -364,6 +405,7 @@ chmod 644 /etc/skel/Congrats
 ---
 
 ## 27) Password Policy
+⬆️ [Back to top](#jump-to-topic)
 
 `/etc/login.defs`
 ```text
@@ -378,6 +420,7 @@ minlen = 8
 ---
 
 ## 28) Passwordless Root SSH (Lab Scenario)
+⬆️ [Back to top](#jump-to-topic)
 
 ```bash
 ssh-keygen

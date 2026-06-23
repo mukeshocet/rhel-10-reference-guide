@@ -42,3 +42,20 @@ Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX2
 - **10 minutes:** revise 1 beginner section from the Medium guide
 - **30 minutes:** complete one topic group (for example users + permissions)
 - **60+ minutes:** simulate mini-exam with 4-6 mixed tasks
+
+## Practice Mode Plans
+
+### Mode A - Daily Sprint (15-20 min)
+- 1 beginner task
+- 1 verification command
+- 1 quick note about mistakes
+
+### Mode B - Focus Block (35-45 min)
+- 2 exam-critical tasks
+- 1 troubleshooting task (FAQ/common mistakes)
+- 1 final checklist pass
+
+### Mode C - Mini Mock (60-90 min)
+- 4-6 mixed tasks across networking, permissions, storage, and services
+- Strictly verify every task before moving
+- End with the one-page cheatsheet recap

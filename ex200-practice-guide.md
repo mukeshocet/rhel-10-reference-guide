@@ -106,6 +106,25 @@
 
 ---
 
+## Practice Mode A/B/C
+
+### Mode A - Daily Sprint (15-20 min)
+- Pick 1 `🟢 Beginner` task
+- Execute + Verify
+- Review 1 line from **Common Mistakes**
+
+### Mode B - Focus Block (35-45 min)
+- Pick 2 `🔴 Exam-Critical` tasks
+- Complete both with full verification
+- Run the **Exam-Day Fast Checklist**
+
+### Mode C - Mini Mock (60-90 min)
+- Pick 4-6 mixed tasks (network, users, ACL/LVM, service)
+- No notes while executing
+- Validate all outcomes at the end
+
+---
+
 ## Before You Start
 
 - Practice on lab VMs (for example: `servera.lab.example.com`, `serverb.lab.example.com`)
@@ -129,6 +148,7 @@ Use the same style everywhere to avoid confusion:
 ---
 
 ## Q1) Configure Network and Hostname
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Configure network settings and hostname for your servers.
@@ -158,6 +178,7 @@ ping -c 2 <gateway>
 ---
 
 ## Q2) Configure Repositories (HTTP / ISO / DVD)
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Set up BaseOS and AppStream repositories.
@@ -200,6 +221,7 @@ dnf info bash
 ---
 
 ## Q3) Make Existing HTTP Content Available on Port 82
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 HTTP content exists already. Do not modify content. Make it reachable on port 82.
@@ -229,6 +251,7 @@ curl http://localhost:82
 ---
 
 ## Q4) Create Users and Group
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Create:
@@ -266,6 +289,7 @@ getent passwd sarah
 ---
 
 ## Q5) Shared Collaboration Directory with SGID
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Create `/common/admin` with:
@@ -295,6 +319,7 @@ ls -ld /common/admin
 ---
 
 ## Q6) Auto-mount NFS Shares with Timeout
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Auto-mount:
@@ -339,6 +364,7 @@ ls /automount/private
 ---
 
 ## Q7) Cron Job and Deny One User
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 - As `harry`, run job at `12:30`
@@ -375,6 +401,7 @@ grep -w natasha /etc/cron.deny
 ---
 
 ## Q8) ACL on `/var/tmp/fstab`
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 - copy `/etc/fstab` to `/var/tmp`
@@ -398,6 +425,7 @@ getfacl /var/tmp/fstab
 ---
 
 ## Q9) Configure NTP Client (Chrony)
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Use `ntp.lab.example.com` as time source.
@@ -429,6 +457,7 @@ timedatectl
 ---
 
 ## Q10) Find Files Larger Than 4MB and Copy
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Find files in `/etc` greater than `4MB` and copy to `/find/largefiles`.
@@ -448,6 +477,7 @@ ls -lh /find/largefiles
 ---
 
 ## Q11) Create User with Specific UID
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Create user `billy` with UID `6969`.
@@ -467,6 +497,7 @@ id billy
 ---
 
 ## Q12) Archive and Compress Directory
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Backup `/var/tmp` to `/root/ex200.tar.gz`.
@@ -484,6 +515,7 @@ tar -tzf /root/ex200.tar.gz | head
 ---
 
 ## Q13) Set UMASK for User
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Set default permissions for `natasha` using umask.
@@ -508,6 +540,7 @@ umask
 ---
 
 ## Q14) Password Expiry Policy for New Users
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Set max password age (example in source: `20` days).
@@ -531,6 +564,7 @@ chage -l test
 ---
 
 ## Q15) Allow `admin` Group Passwordless sudo
+⬆️ [Back to top](#table-of-contents)
 
 ### Add via `visudo`
 ```text
@@ -545,6 +579,7 @@ sudo -l
 ---
 
 ## Q16) Bash Script Practice
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal
 Create script to find files smaller than `1M` in `/usr/share` and copy to `/root/find`.
@@ -574,6 +609,7 @@ ls -l /root/find | head
 ---
 
 ## Q17) Reset Forgotten Root Password
+⬆️ [Back to top](#table-of-contents)
 
 ### High-level flow
 1. Reboot and edit GRUB entry (`e`)
@@ -593,6 +629,7 @@ exec /sbin/init
 ---
 
 ## Q18) Create 512MB Swap Partition
+⬆️ [Back to top](#table-of-contents)
 
 ### Commands (example disk)
 ```bash
@@ -621,6 +658,7 @@ swapon --show
 ---
 
 ## Q19) Create LVM with Specific Extents
+⬆️ [Back to top](#table-of-contents)
 
 ### Goal (as source style)
 - VG with extent size 8MiB
@@ -656,6 +694,7 @@ df -h | grep /mnt/database
 ---
 
 ## Q21) Extend Existing LV by 100 Extents
+⬆️ [Back to top](#table-of-contents)
 
 ### Command
 ```bash
@@ -671,6 +710,7 @@ lvdisplay
 ---
 
 ## Q22) Enable Recommended tuned Profile
+⬆️ [Back to top](#table-of-contents)
 
 ### Commands
 ```bash
@@ -689,6 +729,7 @@ tuned-adm active
 ---
 
 ## Q24) Run Script with systemd Timer
+⬆️ [Back to top](#table-of-contents)
 
 ### Script
 `/usr/local/testtimer.sh`
@@ -741,6 +782,7 @@ systemctl list-timers | grep testtimer
 ---
 
 ## Q24 (Flatpak) Configure Flatpak Remote
+⬆️ [Back to top](#table-of-contents)
 
 ### Commands
 ```bash
@@ -759,6 +801,7 @@ flatpak remotes
 ---
 
 ## Q25) Script That Prints Second Argument Then First
+⬆️ [Back to top](#table-of-contents)
 
 ### `/script.sh`
 ```bash
@@ -789,6 +832,7 @@ test2 test1
 ---
 
 ## Q26) Add File to All New Users’ Home Directories
+⬆️ [Back to top](#table-of-contents)
 
 ### Commands
 ```bash
@@ -806,6 +850,7 @@ ls -l /home/testuser/Congrats
 ---
 
 ## Q27) Enforce Password Expiry and Minimum Length
+⬆️ [Back to top](#table-of-contents)
 
 ### `/etc/login.defs`
 ```text
@@ -825,6 +870,7 @@ grep -E "PASS_MAX_DAYS|minlen" /etc/login.defs /etc/security/pwquality.conf
 ---
 
 ## Q28) Passwordless Root SSH from ServerA to ServerB
+⬆️ [Back to top](#table-of-contents)
 
 ### On ServerB
 ```bash
