@@ -127,7 +127,7 @@
 
 ## Before You Start
 
-- Practice on lab VMs (for example: `servera.lab.example.com`, `serverb.lab.example.com`)
+- Practice on lab VMs (for example: `node1.domain.com`, `node2.domain.com`)
 - Use root or `sudo` access where needed
 - Read each question first, then run commands carefully
 - In real exams, names, IPs, and passwords can be different
