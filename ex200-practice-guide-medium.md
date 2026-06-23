@@ -12,6 +12,12 @@ Each section is independent, so you can revise fast even when you only have 10-1
 2. Run commands in a lab VM.
 3. Validate result before moving to next section.
 
+**Start Practice:**
+
+[![Beginner Set](https://img.shields.io/badge/Start-Beginner_Set-success)](#4-users-and-groups)
+[![Exam-Critical Set](https://img.shields.io/badge/Start-Exam--Critical_Set-important)](#2-repository-configuration-baseosappstream)
+[![1-Page Cheatsheet](https://img.shields.io/badge/Open-Cheatsheet-blue)](./ex200-one-page-cheatsheet.md)
+
 ---
 
 ## Jump to Topic
@@ -402,6 +408,37 @@ ssh root@serverb
 - Forgot SELinux port label when using non-default web port
 - Forgot `daemon-reload` after creating systemd unit files
 - Forgot persistence updates in `/etc/fstab`
+
+## Mini FAQ (Collapsible)
+
+<details>
+<summary><strong>Q: `semanage` command is missing. What should I install?</strong></summary>
+
+```bash
+dnf install -y policycoreutils*
+```
+</details>
+
+<details>
+<summary><strong>Q: My repo is configured but `dnf` still does not show it.</strong></summary>
+
+```bash
+dnf clean all
+dnf repolist all
+```
+
+Also re-check `baseurl` and `enabled=1`.
+</details>
+
+<details>
+<summary><strong>Q: autofs does not mount NFS paths.</strong></summary>
+
+```bash
+systemctl status autofs
+```
+
+Then review `/etc/auto.master` and your map file path.
+</details>
 
 If you want the full detailed explanations, use the detailed version:
 **`ex200-practice-guide.md`**

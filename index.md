@@ -10,6 +10,13 @@ Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX2
 
 - [EX200 Practice Guide (Detailed)](./ex200-practice-guide.md)
 - [EX200 Practice Guide (Medium Ready)](./ex200-practice-guide-medium.md)
+- [EX200 One-Page Cheatsheet](./ex200-one-page-cheatsheet.md)
+
+**Start Practice Buttons:**
+
+[![Start in 10 Minutes](https://img.shields.io/badge/Start-10_Min_Track-success)](./ex200-practice-guide-medium.md#quick-start)
+[![Start Exam-Critical Track](https://img.shields.io/badge/Start-Exam--Critical_Track-important)](./ex200-practice-guide.md#practice-planner-difficulty--time)
+[![Open One-Page Cheatsheet](https://img.shields.io/badge/Open-One--Page_Cheatsheet-blue)](./ex200-one-page-cheatsheet.md)
 
 ## What You Get
 

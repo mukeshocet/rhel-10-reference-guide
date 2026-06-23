@@ -17,6 +17,12 @@
 4. Validate immediately using that question's **Verify** block.
 5. If verification fails, use the **Common Mistakes** section.
 
+**Start Practice:**
+
+[![Start with Beginner Tasks](https://img.shields.io/badge/Start-Beginner_Tasks-success)](#q4-create-users-and-group)
+[![Start Exam-Critical Tasks](https://img.shields.io/badge/Start-Exam--Critical_Tasks-important)](#q2-configure-repositories-http--iso--dvd)
+[![Open 1-Page Cheatsheet](https://img.shields.io/badge/Open-1--Page_Cheatsheet-blue)](./ex200-one-page-cheatsheet.md)
+
 ---
 
 ## Table of Contents
@@ -887,26 +893,39 @@ ssh root@serverb
 
 ## FAQ
 
-### `semanage: command not found`
+<details>
+<summary><strong>`semanage: command not found`</strong></summary>
+
 Install:
+
 ```bash
 dnf install -y policycoreutils*
 ```
+</details>
 
-### Repo still not visible in `dnf repolist`
+<details>
+<summary><strong>Repo still not visible in `dnf repolist`</strong></summary>
+
 - Check `.repo` file syntax and `enabled=1`
 - Run:
+
 ```bash
 dnf clean all
 dnf repolist all
 ```
+</details>
 
-### `autofs` not mounting
+<details>
+<summary><strong>`autofs` not mounting</strong></summary>
+
 - Confirm service state:
+
 ```bash
 systemctl status autofs
 ```
+
 - Re-check `/etc/auto.master` and map file path.
+</details>
 
 ---
 
