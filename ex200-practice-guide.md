@@ -164,7 +164,6 @@ nmtui
 Use these commands to identify the connected device or configure from the command line with `nmcli` when needed:
 
 Exam tip: some interfaces may appear as disconnected. Use `nmcli device` to identify the connected device so you configure networking on the correct interface.
-
 ```bash
 nmcli connection show
 ip a
