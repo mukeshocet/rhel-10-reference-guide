@@ -795,15 +795,24 @@ systemctl list-timers | grep testtimer
 ### Commands
 ```bash
 dnf install -y flatpak
+
+# System-wide remote (available to all users)
 flatpak remotes
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-ls
 flatpak list
+
+# User-only remote (available only to that user)
+su - <username>
+flatpak remotes --user
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-ls --user
 ```
 
 ### Verify
 ```bash
 flatpak remotes
+su - <username> -c "flatpak remotes --user"
 ```
 
 ---
