@@ -9,13 +9,10 @@
 
 ## Quick Start (5 Minutes)
 
-1. Open two terminals:
-   - Terminal 1: run commands
-   - Terminal 2: run verification commands
-2. Pick one question from the table of contents below.
-3. Complete only that question.
-4. Validate immediately using that question's **Verify** block.
-5. If verification fails, use the **Common Mistakes** section.
+1. Pick one question from the table of contents below.
+2. Complete only that question.
+3. Validate immediately using that question's **Verify** block.
+4. If verification fails, use the **Common Mistakes** section.
 
 **Start Practice:**
 
