@@ -261,6 +261,32 @@ ssh-copy-id root@serverb
 ssh root@serverb
 ```
 
+## RHEL 9 only) Podman container tasks (optional for RHEL 10 prep)
+
+```bash
+dnf search podman
+dnf install -y podman container-tools
+podman login registry.lab.example.com --tls-verify=false
+```
+
+Run as user `harry`:
+```bash
+su - harry
+podman run -d --name watch registry.access.redhat.com/ubi8/ubi
+podman ps
+```
+
+Create user service:
+```bash
+podman create --name watch_c watch
+podman generate systemd --name watch_c --files --new
+mkdir -p ~/.config/systemd/user
+mv container-watch_c.service ~/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user enable --now container-watch_c.service
+sudo loginctl enable-linger harry
+```
+
 ---
 
 ## Final 60-Second Check
