@@ -507,16 +507,25 @@ id billy
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
-Backup `/var/tmp` to `/root/ex200.tar.gz`.
+Backup `/var/tmp` using gzip, bz2, or xz compression.
 
-### Command
+### Commands
 ```bash
+# gzip
 tar -zcvf /root/ex200.tar.gz /var/tmp
+
+# bz2
+tar -jcvf /root/ex200.tar.bz2 /var/tmp
+
+# xz
+tar -Jcvf /root/ex200.tar.xz /var/tmp
 ```
 
 ### Verify
 ```bash
 tar -tzf /root/ex200.tar.gz | head
+tar -tjf /root/ex200.tar.bz2 | head
+tar -tJf /root/ex200.tar.xz | head
 ```
 
 ---
