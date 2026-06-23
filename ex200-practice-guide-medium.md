@@ -6,6 +6,47 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 ---
 
+## Quick Start
+
+1. Pick one section.
+2. Run commands in a lab VM.
+3. Validate result before moving to next section.
+
+---
+
+## Jump to Topic
+
+- [1) Network and Hostname](#1-network-and-hostname)
+- [2) Repository Configuration (BaseOS/AppStream)](#2-repository-configuration-baseosappstream)
+- [3) HTTP on Port 82](#3-http-on-port-82)
+- [4) Users and Groups](#4-users-and-groups)
+- [5) Shared Directory with SGID](#5-shared-directory-with-sgid)
+- [6) NFS Auto-mount with Timeout](#6-nfs-auto-mount-with-timeout)
+- [7) Cron + Deny User](#7-cron--deny-user)
+- [8) ACL Task](#8-acl-task)
+- [9) NTP / Chrony](#9-ntp--chrony)
+- [10) Find Files >4MB and Copy](#10-find-files-4mb-and-copy)
+- [11) User with UID](#11-user-with-uid)
+- [12) Archive and Compress](#12-archive-and-compress)
+- [13) UMASK](#13-umask)
+- [14) Password Expiry for New Users](#14-password-expiry-for-new-users)
+- [15) Passwordless sudo for admin Group](#15-passwordless-sudo-for-admin-group)
+- [16) Script Practice](#16-script-practice)
+- [17) Root Password Reset (Recovery)](#17-root-password-reset-recovery)
+- [18) 512MB Swap](#18-512mb-swap)
+- [19) LVM with Extents](#19-lvm-with-extents)
+- [21) Extend LV by 100 Extents](#21-extend-lv-by-100-extents)
+- [22) tuned Profile](#22-tuned-profile)
+- [24) systemd Timer](#24-systemd-timer)
+- [24) Flatpak Remote](#24-flatpak-remote)
+- [25) Script Argument Order](#25-script-argument-order)
+- [26) Default File for New Users](#26-default-file-for-new-users)
+- [27) Password Policy](#27-password-policy)
+- [28) Passwordless Root SSH (Lab Scenario)](#28-passwordless-root-ssh-lab-scenario)
+- [Quick Revision Checklist](#quick-revision-checklist)
+
+---
+
 ## 1) Network and Hostname
 
 ```bash
@@ -334,6 +375,14 @@ ssh root@serverb
 - systemd timer
 - Flatpak
 - SSH key login
+
+## Common Mistakes (Fast Read)
+
+- Wrong network profile name in `nmcli`
+- Repo URL typo or `enabled=0`
+- Forgot SELinux port label when using non-default web port
+- Forgot `daemon-reload` after creating systemd unit files
+- Forgot persistence updates in `/etc/fstab`
 
 If you want the full detailed explanations, use the detailed version:
 **`ex200-practice-guide.md`**
