@@ -49,6 +49,7 @@ Each section is independent, so you can revise fast even when you only have 10-1
 - [26) Default File for New Users](#26-default-file-for-new-users)
 - [27) Password Policy](#27-password-policy)
 - [28) Passwordless Root SSH (Lab Scenario)](#28-passwordless-root-ssh-lab-scenario)
+- [RHEL 9 Only) Containers with Podman](#rhel-9-only-containers-with-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 
 ---
@@ -466,6 +467,39 @@ ssh root@serverb
 
 ---
 
+## RHEL 9 Only) Containers with Podman
+⬆️ [Back to top](#jump-to-topic)
+
+Container-based questions are common in RHEL 9 exam variants. For RHEL 10 preparation, treat this as optional.
+
+```bash
+dnf search podman
+dnf install -y podman container-tools
+podman login registry.lab.example.com --tls-verify=false
+```
+
+Run container as `harry`:
+```bash
+su - harry
+podman run -d --name watch registry.access.redhat.com/ubi8/ubi
+podman ps
+```
+
+Create image/tag and service:
+```bash
+podman pull <IMAGE_URL>
+podman tag <IMAGE_URL> watch
+podman create --name watch_c watch
+podman generate systemd --name watch_c --files --new
+mkdir -p ~/.config/systemd/user
+mv container-watch_c.service ~/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user enable --now container-watch_c.service
+sudo loginctl enable-linger harry
+```
+
+---
+
 ## Quick Revision Checklist
 
 - Network and hostname
@@ -479,6 +513,7 @@ ssh root@serverb
 - systemd timer
 - Flatpak
 - SSH key login
+- (RHEL 9 only) Podman container + user service
 
 ## Common Mistakes (Fast Read)
 

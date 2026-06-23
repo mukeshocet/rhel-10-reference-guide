@@ -53,6 +53,7 @@
 - [Q26) Add File to All New Users’ Home Directories](#q26-add-file-to-all-new-users-home-directories)
 - [Q27) Enforce Password Expiry and Minimum Length](#q27-enforce-password-expiry-and-minimum-length)
 - [Q28) Passwordless Root SSH from ServerA to ServerB](#q28-passwordless-root-ssh-from-servera-to-serverb)
+- [RHEL 9 Only) Container-Based Questions (Podman)](#rhel-9-only-container-based-questions-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 - [Exam-Day Fast Checklist (Printable)](#exam-day-fast-checklist-printable)
 - [Common Mistakes by Topic](#common-mistakes-by-topic)
@@ -934,6 +935,77 @@ ssh root@serverb
 
 ---
 
+## RHEL 9 Only) Container-Based Questions (Podman)
+⬆️ [Back to top](#table-of-contents)
+
+### Scope note
+Container-focused EX200 tasks are commonly reported in RHEL 9 exam variants. They are generally not expected in the same form for RHEL 10-focused practice.
+
+### Base setup commands
+```bash
+dnf search podman
+dnf install -y podman container-tools
+podman login registry.lab.example.com --tls-verify=false
+```
+
+### Question A) Run a container from image URL as user `harry`
+```bash
+su - harry
+podman run -d --name watch registry.access.redhat.com/ubi8/ubi
+podman ps
+```
+
+Alternative image example:
+```bash
+podman run -d --name watch docker.io/library/nginx
+```
+
+### Question B) Create image/tag `watch` as user `harry`
+```bash
+su - harry
+podman pull <IMAGE_URL>
+podman tag <IMAGE_URL> watch
+podman images
+```
+
+If the task requires build instead of pull:
+```bash
+podman build -t watch <build-context-path-or-url>
+```
+
+### Question C) Create user systemd service for the container
+Create container from image/tag:
+```bash
+su - harry
+podman create --name watch_c watch
+```
+
+Generate and install user unit:
+```bash
+podman generate systemd --name watch_c --files --new
+mkdir -p ~/.config/systemd/user
+mv container-watch_c.service ~/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user enable --now container-watch_c.service
+systemctl --user status container-watch_c.service
+podman ps
+```
+
+Enable lingering so user service keeps running without active login:
+```bash
+sudo loginctl enable-linger harry
+```
+
+### Verify
+```bash
+podman ps
+podman images
+systemctl --user status container-watch_c.service
+loginctl show-user harry | grep Linger
+```
+
+---
+
 ## Quick Revision Checklist
 
 - [ ] Network and hostname
@@ -948,6 +1020,7 @@ ssh root@serverb
 - [ ] systemd timer
 - [ ] flatpak remote
 - [ ] SSH key-based access
+- [ ] (RHEL 9 only) podman container + user systemd service
 
 ---
 
