@@ -262,7 +262,14 @@ passwd billy
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
+# gzip
 tar -zcvf /root/ex200.tar.gz /var/tmp
+
+# bz2
+tar -jcvf /root/ex200.tar.bz2 /var/tmp
+
+# xz
+tar -Jcvf /root/ex200.tar.xz /var/tmp
 ```
 
 ---
