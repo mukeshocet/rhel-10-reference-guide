@@ -98,6 +98,7 @@ nmtui
 ```
 
 Use the commands below to find the connected device or configure networking from the command line with `nmcli` when required:
+Exam tip: you may see non-connected devices. Run `nmcli device` to find the connected interface and configure networking on that interface.
 
 ```bash
 nmcli connection show

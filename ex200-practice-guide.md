@@ -127,7 +127,7 @@
 
 ## Before You Start
 
-- Practice on lab VMs (for example: `servera.lab.example.com`, `serverb.lab.example.com`)
+- Practice on lab VMs (for example: `node1.domain.com`, `node2.domain.com`)
 - Use root or `sudo` access where needed
 - Read each question first, then run commands carefully
 - In real exams, names, IPs, and passwords can be different
@@ -163,6 +163,7 @@ nmtui
 ### Helpful CLI commands (optional)
 Use these commands to identify the connected device or configure from the command line with `nmcli` when needed:
 
+Exam tip: some interfaces may appear as disconnected. Use `nmcli device` to identify the connected device so you configure networking on the correct interface.
 ```bash
 nmcli connection show
 ip a
