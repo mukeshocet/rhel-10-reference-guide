@@ -580,6 +580,7 @@ chage -l test
 
 ### Verify
 ```bash
+su - <user-in-admin-group>
 sudo -l
 ```
 

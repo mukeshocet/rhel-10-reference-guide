@@ -294,6 +294,12 @@ PASS_MAX_DAYS 20
 %admin ALL=(ALL) NOPASSWD: ALL
 ```
 
+Verify: log in as a user who is part of the `admin` group, then run:
+
+```bash
+sudo -l
+```
+
 ---
 
 ## 16) Script Practice
