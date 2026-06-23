@@ -691,6 +691,14 @@ mkfs.ext4 /dev/datastore/database
 mkdir -p /mnt/database
 ```
 
+### Size vs extent note
+If the question gives LV **size** (for example `500M`, `2G`) instead of extents, use `-L` instead of `-l`.
+
+Example:
+```bash
+lvcreate -L 2G -n database datastore
+```
+
 `/etc/fstab` entry example:
 ```text
 /dev/datastore/database /mnt/database ext4 defaults 0 0

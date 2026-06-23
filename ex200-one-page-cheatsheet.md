@@ -195,6 +195,8 @@ swapon -a
 pvcreate /dev/sdb2
 vgcreate -s 8M datastore /dev/sdb2
 lvcreate -l 50 -n database datastore
+# If size is given instead of extents, use -L:
+lvcreate -L 2G -n database datastore
 mkfs.ext4 /dev/datastore/database
 lvextend -l +100 -r /dev/datastore/database
 ```

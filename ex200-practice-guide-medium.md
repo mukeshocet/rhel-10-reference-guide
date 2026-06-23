@@ -352,6 +352,12 @@ lvcreate -l 50 -n database datastore
 mkfs.ext4 /dev/datastore/database
 ```
 
+If the task provides a size (not extents), use `-L`:
+
+```bash
+lvcreate -L 2G -n database datastore
+```
+
 ---
 
 ## 21) Extend LV by 100 Extents
