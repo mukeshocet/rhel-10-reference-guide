@@ -214,6 +214,8 @@ tuned-adm active
 
 Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
 
+Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
+
 ```bash
 systemctl daemon-reload
 systemctl enable --now testtimer.timer
@@ -234,6 +236,8 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 ```
 
 ## Question 25: reverse args script
+
+Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
 Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
