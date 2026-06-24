@@ -22,33 +22,33 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 ## Jump to Topic
 
-- [1) Network and Hostname](#1-network-and-hostname)
-- [2) Repository Configuration (BaseOS/AppStream)](#2-repository-configuration-baseosappstream)
-- [3) HTTP on Port 82](#3-http-on-port-82)
-- [4) Users and Groups](#4-users-and-groups)
-- [5) Shared Directory with SGID](#5-shared-directory-with-sgid)
-- [6) NFS Auto-mount with Timeout](#6-nfs-auto-mount-with-timeout)
-- [7) Cron + Deny User](#7-cron--deny-user)
-- [8) ACL Task](#8-acl-task)
-- [9) NTP / Chrony](#9-ntp--chrony)
-- [10) Find Files >4MB and Copy](#10-find-files-4mb-and-copy)
-- [11) User with UID](#11-user-with-uid)
-- [12) Archive and Compress](#12-archive-and-compress)
-- [13) UMASK](#13-umask)
-- [14) Password Expiry for New Users](#14-password-expiry-for-new-users)
-- [15) Passwordless sudo for admin Group](#15-passwordless-sudo-for-admin-group)
-- [16) Script Practice](#16-script-practice)
-- [17) Root Password Reset (Recovery)](#17-root-password-reset-recovery)
-- [18) 512MB Swap](#18-512mb-swap)
-- [19) LVM with Extents](#19-lvm-with-extents)
-- [21) Extend LV by 100 Extents](#21-extend-lv-by-100-extents)
-- [22) tuned Profile](#22-tuned-profile)
-- [24) systemd Timer](#24-systemd-timer)
-- [24) Flatpak Remote](#24-flatpak-remote)
-- [25) Script Argument Order](#25-script-argument-order)
-- [26) Default File for New Users](#26-default-file-for-new-users)
-- [27) Password Policy](#27-password-policy)
-- [28) Passwordless Root SSH (Lab Scenario)](#28-passwordless-root-ssh-lab-scenario)
+- [Question 1: Network and Hostname](#question-1-network-and-hostname)
+- [Question 2: Repository Configuration (BaseOS/AppStream)](#question-2-repository-configuration-baseos-appstream)
+- [Question 3: HTTP on Port 82](#question-3-http-on-port-82)
+- [Question 4: Users and Groups](#question-4-users-and-groups)
+- [Question 5: Shared Directory with SGID](#question-5-shared-directory-with-sgid)
+- [Question 6: NFS Auto-mount with Timeout](#question-6-nfs-auto-mount-with-timeout)
+- [Question 7: Cron + Deny User](#question-7-cron-deny-user)
+- [Question 8: ACL Task](#question-8-acl-task)
+- [Question 9: NTP / Chrony](#question-9-ntp-chrony)
+- [Question 10: Find Files >4MB and Copy](#question-10-find-files-4mb-and-copy)
+- [Question 11: User with UID](#question-11-user-with-uid)
+- [Question 12: Archive and Compress](#question-12-archive-and-compress)
+- [Question 13: UMASK](#question-13-umask)
+- [Question 14: Password Expiry for New Users](#question-14-password-expiry-for-new-users)
+- [Question 15: Passwordless sudo for admin Group](#question-15-passwordless-sudo-for-admin-group)
+- [Question 16: Script Practice](#question-16-script-practice)
+- [Question 17: Root Password Reset (Recovery)](#question-17-root-password-reset-recovery)
+- [Question 18: 512MB Swap](#question-18-512mb-swap)
+- [Question 19: LVM with Extents](#question-19-lvm-with-extents)
+- [Question 21: Extend LV by 100 Extents](#question-21-extend-lv-by-100-extents)
+- [Question 22: tuned Profile](#question-22-tuned-profile)
+- [Question 24: systemd Timer](#question-24-systemd-timer)
+- [Question 24: Flatpak Remote](#question-24-flatpak-remote)
+- [Question 25: Script Argument Order](#question-25-script-argument-order)
+- [Question 26: Default File for New Users](#question-26-default-file-for-new-users)
+- [Question 27: Password Policy](#question-27-password-policy)
+- [Question 28: Passwordless Root SSH (Lab Scenario)](#question-28-passwordless-root-ssh-lab-scenario)
 - [RHEL 9 Only) Containers with Podman](#rhel-9-only-containers-with-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 
@@ -65,11 +65,11 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 | Topic Group | Difficulty | Time |
 | --- | --- | --- |
-| Network/Repos/Web (Q1-Q3) | 🔴 | ⏱️ 30-45 min |
-| Users/Permissions/ACL (Q4-Q8) | 🔴 | ⏱️ 30-40 min |
-| Time/Find/Archive/Policy (Q9-Q15) | 🟡 | ⏱️ 35-50 min |
-| Scripting/Recovery/Storage (Q16-Q21) | 🔴 | ⏱️ 45-60 min |
-| tuned/systemd/flatpak/SSH (Q22-Q28) | 🟡 | ⏱️ 35-45 min |
+| Network/Repos/Web (Question 1-Question 3) | 🔴 | ⏱️ 30-45 min |
+| Users/Permissions/ACL (Question 4-Question 8) | 🔴 | ⏱️ 30-40 min |
+| Time/Find/Archive/Policy (Question 9-Question 15) | 🟡 | ⏱️ 35-50 min |
+| Scripting/Recovery/Storage (Question 16-Question 21) | 🔴 | ⏱️ 45-60 min |
+| tuned/systemd/flatpak/SSH (Question 22-Question 28) | 🟡 | ⏱️ 35-45 min |
 
 ---
 
@@ -89,7 +89,7 @@ Each section is independent, so you can revise fast even when you only have 10-1
 
 ---
 
-## 1) Network and Hostname
+## Question 1: Network and Hostname
 ⬆️ [Back to top](#jump-to-topic)
 
 Recommended: use `nmtui` to configure networking with the text UI.
@@ -112,7 +112,7 @@ hostnamectl set-hostname <hostname>
 
 ---
 
-## 2) Repository Configuration (BaseOS/AppStream)
+## Question 2: Repository Configuration (BaseOS/AppStream)
 ⬆️ [Back to top](#jump-to-topic)
 
 ```ini
@@ -138,7 +138,7 @@ dnf search httpd
 
 ---
 
-## 3) HTTP on Port 82
+## Question 3: HTTP on Port 82
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -152,7 +152,7 @@ curl http://localhost:82
 
 ---
 
-## 4) Users and Groups
+## Question 4: Users and Groups
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -167,7 +167,7 @@ passwd sarah
 
 ---
 
-## 5) Shared Directory with SGID
+## Question 5: Shared Directory with SGID
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -179,7 +179,7 @@ chmod g+s /common/admin
 
 ---
 
-## 6) NFS Auto-mount with Timeout
+## Question 6: NFS Auto-mount with Timeout
 ⬆️ [Back to top](#jump-to-topic)
 
 `/etc/auto.master`
@@ -199,7 +199,7 @@ systemctl enable --now autofs
 
 ---
 
-## 7) Cron + Deny User
+## Question 7: Cron + Deny User
 ⬆️ [Back to top](#jump-to-topic)
 
 Crontab:
@@ -214,7 +214,7 @@ echo natasha >> /etc/cron.deny
 
 ---
 
-## 8) ACL Task
+## Question 8: ACL Task
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -226,7 +226,7 @@ getfacl /var/tmp/fstab
 
 ---
 
-## 9) NTP / Chrony
+## Question 9: NTP / Chrony
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -239,7 +239,7 @@ timedatectl
 
 ---
 
-## 10) Find Files >4MB and Copy
+## Question 10: Find Files >4MB and Copy
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -249,7 +249,7 @@ find /etc -type f -size +4M -exec cp {} /find/largefiles/ \;
 
 ---
 
-## 11) User with UID
+## Question 11: User with UID
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -259,7 +259,7 @@ passwd billy
 
 ---
 
-## 12) Archive and Compress
+## Question 12: Archive and Compress
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -275,7 +275,7 @@ tar -Jcvf /root/ex200.tar.xz /var/tmp
 
 ---
 
-## 13) UMASK
+## Question 13: UMASK
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -285,7 +285,7 @@ umask 0277
 
 ---
 
-## 14) Password Expiry for New Users
+## Question 14: Password Expiry for New Users
 ⬆️ [Back to top](#jump-to-topic)
 
 `/etc/login.defs`
@@ -295,7 +295,7 @@ PASS_MAX_DAYS 20
 
 ---
 
-## 15) Passwordless sudo for admin Group
+## Question 15: Passwordless sudo for admin Group
 ⬆️ [Back to top](#jump-to-topic)
 
 ```text
@@ -310,7 +310,7 @@ sudo -l
 
 ---
 
-## 16) Script Practice
+## Question 16: Script Practice
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -320,7 +320,7 @@ find /usr/share -type f -size -1M -exec cp -a {} /root/find \;
 
 ---
 
-## 17) Root Password Reset (Recovery)
+## Question 17: Root Password Reset (Recovery)
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -331,7 +331,7 @@ exec /sbin/init
 
 ---
 
-## 18) 512MB Swap
+## Question 18: 512MB Swap
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -343,7 +343,7 @@ swapon -a
 
 ---
 
-## 19) LVM with Extents
+## Question 19: LVM with Extents
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -361,7 +361,7 @@ lvcreate -L 2G -n database datastore
 
 ---
 
-## 21) Extend LV by 100 Extents
+## Question 21: Extend LV by 100 Extents
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -370,7 +370,7 @@ lvextend -l +100 -r /dev/datastore/database
 
 ---
 
-## 22) tuned Profile
+## Question 22: tuned Profile
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -382,7 +382,7 @@ tuned-adm active
 
 ---
 
-## 24) systemd Timer
+## Question 24: systemd Timer
 ⬆️ [Back to top](#jump-to-topic)
 
 Exam note: often you are told to install a lookup RPM first; it usually drops the required script in the target directory mentioned in the task.
@@ -400,7 +400,7 @@ systemctl enable --now testtimer.timer
 
 ---
 
-## 24) Flatpak Remote
+## Question 24: Flatpak Remote
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -416,7 +416,7 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 
 ---
 
-## 25) Script Argument Order
+## Question 25: Script Argument Order
 ⬆️ [Back to top](#jump-to-topic)
 
 Optional: this exact pattern is unlikely to appear in the exam. Actual exam script tasks are generally easier.
@@ -433,7 +433,7 @@ fi
 
 ---
 
-## 26) Default File for New Users
+## Question 26: Default File for New Users
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -443,7 +443,7 @@ chmod 644 /etc/skel/Congrats
 
 ---
 
-## 27) Password Policy
+## Question 27: Password Policy
 ⬆️ [Back to top](#jump-to-topic)
 
 `/etc/login.defs`
@@ -458,7 +458,7 @@ minlen = 8
 
 ---
 
-## 28) Passwordless Root SSH (Lab Scenario)
+## Question 28: Passwordless Root SSH (Lab Scenario)
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash

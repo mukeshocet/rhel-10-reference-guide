@@ -7,7 +7,7 @@ Use this page for fast revision before practice sessions.
 
 ---
 
-## 1) Network + Hostname
+## Question 1: Network + Hostname
 
 ```bash
 nmcli connection show
@@ -18,7 +18,7 @@ nmcli connection up <profile>
 hostnamectl set-hostname <hostname>
 ```
 
-## 2) Repositories
+## Question 2: Repositories
 
 ```ini
 [BaseOS]
@@ -37,7 +37,7 @@ dnf clean all
 dnf repolist all
 ```
 
-## 3) HTTP on port 82
+## Question 3: HTTP on port 82
 
 ```bash
 dnf install -y httpd
@@ -48,7 +48,7 @@ firewall-cmd --reload
 curl http://localhost:82
 ```
 
-## 4) Users and Groups
+## Question 4: Users and Groups
 
 ```bash
 groupadd admin
@@ -60,7 +60,7 @@ passwd natasha
 passwd sarah
 ```
 
-## 5) Shared Dir (SGID)
+## Question 5: Shared Dir (SGID)
 
 ```bash
 mkdir -p /common/admin
@@ -69,7 +69,7 @@ chmod 770 /common/admin
 chmod g+s /common/admin
 ```
 
-## 6) NFS + autofs
+## Question 6: NFS + autofs
 
 ```bash
 dnf install -y nfs* autofs*
@@ -87,7 +87,7 @@ public  -ro,sync  nfs.lab.example.com:/public
 private -rw,sync  nfs.lab.example.com:/private
 ```
 
-## 7) Cron + deny
+## Question 7: Cron + deny
 
 ```cron
 30 12 * * * /bin/echo "EX200"
@@ -97,7 +97,7 @@ private -rw,sync  nfs.lab.example.com:/private
 echo natasha >> /etc/cron.deny
 ```
 
-## 8) ACL
+## Question 8: ACL
 
 ```bash
 cp /etc/fstab /var/tmp/
@@ -106,7 +106,7 @@ setfacl -m u:natasha:--- /var/tmp/fstab
 getfacl /var/tmp/fstab
 ```
 
-## 9) Chrony
+## Question 9: Chrony
 
 ```bash
 dnf install -y chrony
@@ -115,21 +115,21 @@ chronyc sources
 timedatectl
 ```
 
-## 10) Find >4MB
+## Question 10: Find >4MB
 
 ```bash
 mkdir -p /find/largefiles
 find /etc -type f -size +4M -exec cp {} /find/largefiles/ \;
 ```
 
-## 11) User UID 6969
+## Question 11: User UID 6969
 
 ```bash
 useradd -u 6969 billy
 passwd billy
 ```
 
-## 12) Archive
+## Question 12: Archive
 
 ```bash
 # gzip
@@ -142,20 +142,20 @@ tar -jcvf /root/ex200.tar.bz2 /var/tmp
 tar -Jcvf /root/ex200.tar.xz /var/tmp
 ```
 
-## 13) umask
+## Question 13: umask
 
 ```bash
 umask 0277
 ```
 
-## 14) Password expiry
+## Question 14: Password expiry
 
 `/etc/login.defs`
 ```text
 PASS_MAX_DAYS 20
 ```
 
-## 15) Passwordless sudo
+## Question 15: Passwordless sudo
 
 ```text
 %admin ALL=(ALL) NOPASSWD: ALL
@@ -167,13 +167,13 @@ Verify as an `admin` group user:
 sudo -l
 ```
 
-## 16) Script practice
+## Question 16: Script practice
 
 ```bash
 find /usr/share -type f -size -1M -exec cp -a {} /root/find \;
 ```
 
-## 17) Root reset flow
+## Question 17: Root reset flow
 
 ```bash
 passwd root
@@ -181,7 +181,7 @@ touch /.autorelabel
 exec /sbin/init
 ```
 
-## 18) Swap 512MB
+## Question 18: Swap 512MB
 
 ```bash
 fdisk /dev/sdb
@@ -201,7 +201,7 @@ mkfs.ext4 /dev/datastore/database
 lvextend -l +100 -r /dev/datastore/database
 ```
 
-## 22) tuned
+## Question 22: tuned
 
 ```bash
 dnf install -y tuned
@@ -210,7 +210,9 @@ tuned-adm recommend
 tuned-adm active
 ```
 
-## 24) systemd timer
+## Question 24: systemd timer
+
+Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
 
 Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
 
@@ -220,7 +222,7 @@ systemctl enable --now testtimer.timer
 systemctl list-timers
 ```
 
-## 24) flatpak
+## Question 24: flatpak
 
 ```bash
 dnf install -y flatpak
@@ -233,7 +235,9 @@ su - <username>
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-## 25) reverse args script
+## Question 25: reverse args script
+
+Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
 Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
@@ -241,21 +245,21 @@ Optional practice; exam scripts are usually easier and may not use this exact pa
 if [ $# -eq 2 ]; then echo "$2 $1"; else echo "Usage: $0 argument1 argument2"; exit 1; fi
 ```
 
-## 26) /etc/skel file
+## Question 26: /etc/skel file
 
 ```bash
 touch /etc/skel/Congrats
 chmod 644 /etc/skel/Congrats
 ```
 
-## 27) password policy
+## Question 27: password policy
 
 `/etc/security/pwquality.conf`
 ```text
 minlen = 8
 ```
 
-## 28) SSH key login
+## Question 28: SSH key login
 
 ```bash
 ssh-keygen
