@@ -26,33 +26,33 @@
 
 - [Before You Start](#before-you-start)
 - [Placeholder Rules (Use Consistent Values)](#placeholder-rules-use-consistent-values)
-- [Q1) Configure Network and Hostname](#q1-configure-network-and-hostname)
-- [Q2) Configure Repositories (HTTP / ISO / DVD)](#q2-configure-repositories-http--iso--dvd)
-- [Q3) Make Existing HTTP Content Available on Port 82](#q3-make-existing-http-content-available-on-port-82)
-- [Q4) Create Users and Group](#q4-create-users-and-group)
-- [Q5) Shared Collaboration Directory with SGID](#q5-shared-collaboration-directory-with-sgid)
-- [Q6) Auto-mount NFS Shares with Timeout](#q6-auto-mount-nfs-shares-with-timeout)
-- [Q7) Cron Job and Deny One User](#q7-cron-job-and-deny-one-user)
-- [Q8) ACL on `/var/tmp/fstab`](#q8-acl-on-vartmpfstab)
-- [Q9) Configure NTP Client (Chrony)](#q9-configure-ntp-client-chrony)
-- [Q10) Find Files Larger Than 4MB and Copy](#q10-find-files-larger-than-4mb-and-copy)
-- [Q11) Create User with Specific UID](#q11-create-user-with-specific-uid)
-- [Q12) Archive and Compress Directory](#q12-archive-and-compress-directory)
-- [Q13) Set UMASK for User](#q13-set-umask-for-user)
-- [Q14) Password Expiry Policy for New Users](#q14-password-expiry-policy-for-new-users)
-- [Q15) Allow `admin` Group Passwordless sudo](#q15-allow-admin-group-passwordless-sudo)
-- [Q16) Bash Script Practice](#q16-bash-script-practice)
-- [Q17) Reset Forgotten Root Password](#q17-reset-forgotten-root-password)
-- [Q18) Create 512MB Swap Partition](#q18-create-512mb-swap-partition)
-- [Q19) Create LVM with Specific Extents](#q19-create-lvm-with-specific-extents)
-- [Q21) Extend Existing LV by 100 Extents](#q21-extend-existing-lv-by-100-extents)
-- [Q22) Enable Recommended tuned Profile](#q22-enable-recommended-tuned-profile)
-- [Q24) Run Script with systemd Timer](#q24-run-script-with-systemd-timer)
-- [Q24 (Flatpak) Configure Flatpak Remote](#q24-flatpak-configure-flatpak-remote)
-- [Q25) Script That Prints Second Argument Then First](#q25-script-that-prints-second-argument-then-first)
-- [Q26) Add File to All New Users’ Home Directories](#q26-add-file-to-all-new-users-home-directories)
-- [Q27) Enforce Password Expiry and Minimum Length](#q27-enforce-password-expiry-and-minimum-length)
-- [Q28) Passwordless Root SSH from ServerA to ServerB](#q28-passwordless-root-ssh-from-servera-to-serverb)
+- [Question 1: Configure Network and Hostname](#question-1-configure-network-and-hostname)
+- [Question 2: Configure Repositories (HTTP / ISO / DVD)](#question-2-configure-repositories-http-iso-dvd)
+- [Question 3: Make Existing HTTP Content Available on Port 82](#question-3-make-existing-http-content-available-on-port-82)
+- [Question 4: Create Users and Group](#question-4-create-users-and-group)
+- [Question 5: Shared Collaboration Directory with SGID](#question-5-shared-collaboration-directory-with-sgid)
+- [Question 6: Auto-mount NFS Shares with Timeout](#question-6-auto-mount-nfs-shares-with-timeout)
+- [Question 7: Cron Job and Deny One User](#question-7-cron-job-and-deny-one-user)
+- [Question 8: ACL on `/var/tmp/fstab`](#question-8-acl-on-var-tmp-fstab)
+- [Question 9: Configure NTP Client (Chrony)](#question-9-configure-ntp-client-chrony)
+- [Question 10: Find Files Larger Than 4MB and Copy](#question-10-find-files-larger-than-4mb-and-copy)
+- [Question 11: Create User with Specific UID](#question-11-create-user-with-specific-uid)
+- [Question 12: Archive and Compress Directory](#question-12-archive-and-compress-directory)
+- [Question 13: Set UMASK for User](#question-13-set-umask-for-user)
+- [Question 14: Password Expiry Policy for New Users](#question-14-password-expiry-policy-for-new-users)
+- [Question 15: Allow `admin` Group Passwordless sudo](#question-15-allow-admin-group-passwordless-sudo)
+- [Question 16: Bash Script Practice](#question-16-bash-script-practice)
+- [Question 17: Reset Forgotten Root Password](#question-17-reset-forgotten-root-password)
+- [Question 18: Create 512MB Swap Partition](#question-18-create-512mb-swap-partition)
+- [Question 19: Create LVM with Specific Extents](#question-19-create-lvm-with-specific-extents)
+- [Question 21: Extend Existing LV by 100 Extents](#question-21-extend-existing-lv-by-100-extents)
+- [Question 22: Enable Recommended tuned Profile](#question-22-enable-recommended-tuned-profile)
+- [Question 24: Run Script with systemd Timer](#question-24-run-script-with-systemd-timer)
+- [Question 24 (Flatpak): Configure Flatpak Remote](#question-24-flatpak-configure-flatpak-remote)
+- [Question 25: Script That Prints Second Argument Then First](#question-25-script-that-prints-second-argument-then-first)
+- [Question 26: Add File to All New Users’ Home Directories](#question-26-add-file-to-all-new-users-home-directories)
+- [Question 27: Enforce Password Expiry and Minimum Length](#question-27-enforce-password-expiry-and-minimum-length)
+- [Question 28: Passwordless Root SSH from ServerA to ServerB](#question-28-passwordless-root-ssh-from-servera-to-serverb)
 - [RHEL 9 Only) Container-Based Questions (Podman)](#rhel-9-only-container-based-questions-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 - [Exam-Day Fast Checklist (Printable)](#exam-day-fast-checklist-printable)
@@ -74,33 +74,33 @@
 
 | Question | Topic | Difficulty | Time |
 | --- | --- | --- | --- |
-| Q1 | Network + Hostname | 🟡 Intermediate | ⏱️ 10-15 min |
-| Q2 | Repositories | 🔴 Exam-Critical | ⏱️ 8-12 min |
-| Q3 | HTTP + SELinux + Firewall | 🔴 Exam-Critical | ⏱️ 12-18 min |
-| Q4 | Users + Groups | 🟢 Beginner | ⏱️ 8-10 min |
-| Q5 | Shared Directory (SGID) | 🔴 Exam-Critical | ⏱️ 8-12 min |
-| Q6 | NFS + autofs | 🔴 Exam-Critical | ⏱️ 15-20 min |
-| Q7 | Cron + deny | 🟢 Beginner | ⏱️ 5-8 min |
-| Q8 | ACL | 🔴 Exam-Critical | ⏱️ 8-12 min |
-| Q9 | Chrony/NTP | 🟡 Intermediate | ⏱️ 6-10 min |
-| Q10 | find + copy | 🟢 Beginner | ⏱️ 5-8 min |
-| Q11 | user with UID | 🟢 Beginner | ⏱️ 3-5 min |
-| Q12 | tar backup | 🟢 Beginner | ⏱️ 3-5 min |
-| Q13 | umask | 🟡 Intermediate | ⏱️ 5-8 min |
-| Q14 | password expiry | 🟡 Intermediate | ⏱️ 5-8 min |
-| Q15 | sudoers | 🔴 Exam-Critical | ⏱️ 5-8 min |
-| Q16 | shell script | 🟡 Intermediate | ⏱️ 8-12 min |
-| Q17 | root reset flow | 🔴 Exam-Critical | ⏱️ 10-15 min |
-| Q18 | swap partition | 🔴 Exam-Critical | ⏱️ 10-15 min |
-| Q19 | LVM create + mount | 🔴 Exam-Critical | ⏱️ 12-18 min |
-| Q21 | LVM extend | 🔴 Exam-Critical | ⏱️ 6-10 min |
-| Q22 | tuned | 🟢 Beginner | ⏱️ 4-6 min |
-| Q24 | systemd timer | 🟡 Intermediate | ⏱️ 10-15 min |
-| Q24-flatpak | flatpak remote | 🟢 Beginner | ⏱️ 4-6 min |
-| Q25 | argument script | 🟢 Beginner | ⏱️ 5-8 min |
-| Q26 | /etc/skel | 🟢 Beginner | ⏱️ 4-6 min |
-| Q27 | password policy | 🟡 Intermediate | ⏱️ 6-10 min |
-| Q28 | SSH key login | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Question 1 | Network + Hostname | 🟡 Intermediate | ⏱️ 10-15 min |
+| Question 2 | Repositories | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Question 3 | HTTP + SELinux + Firewall | 🔴 Exam-Critical | ⏱️ 12-18 min |
+| Question 4 | Users + Groups | 🟢 Beginner | ⏱️ 8-10 min |
+| Question 5 | Shared Directory (SGID) | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Question 6 | NFS + autofs | 🔴 Exam-Critical | ⏱️ 15-20 min |
+| Question 7 | Cron + deny | 🟢 Beginner | ⏱️ 5-8 min |
+| Question 8 | ACL | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Question 9 | Chrony/NTP | 🟡 Intermediate | ⏱️ 6-10 min |
+| Question 10 | find + copy | 🟢 Beginner | ⏱️ 5-8 min |
+| Question 11 | user with UID | 🟢 Beginner | ⏱️ 3-5 min |
+| Question 12 | tar backup | 🟢 Beginner | ⏱️ 3-5 min |
+| Question 13 | umask | 🟡 Intermediate | ⏱️ 5-8 min |
+| Question 14 | password expiry | 🟡 Intermediate | ⏱️ 5-8 min |
+| Question 15 | sudoers | 🔴 Exam-Critical | ⏱️ 5-8 min |
+| Question 16 | shell script | 🟡 Intermediate | ⏱️ 8-12 min |
+| Question 17 | root reset flow | 🔴 Exam-Critical | ⏱️ 10-15 min |
+| Question 18 | swap partition | 🔴 Exam-Critical | ⏱️ 10-15 min |
+| Question 19 | LVM create + mount | 🔴 Exam-Critical | ⏱️ 12-18 min |
+| Question 21 | LVM extend | 🔴 Exam-Critical | ⏱️ 6-10 min |
+| Question 22 | tuned | 🟢 Beginner | ⏱️ 4-6 min |
+| Question 24 | systemd timer | 🟡 Intermediate | ⏱️ 10-15 min |
+| Question 24 (Flatpak) | flatpak remote | 🟢 Beginner | ⏱️ 4-6 min |
+| Question 25 | argument script | 🟢 Beginner | ⏱️ 5-8 min |
+| Question 26 | /etc/skel | 🟢 Beginner | ⏱️ 4-6 min |
+| Question 27 | password policy | 🟡 Intermediate | ⏱️ 6-10 min |
+| Question 28 | SSH key login | 🔴 Exam-Critical | ⏱️ 8-12 min |
 
 ---
 
@@ -145,7 +145,7 @@ Use the same style everywhere to avoid confusion:
 
 ---
 
-## Q1) Configure Network and Hostname
+## Question 1: Configure Network and Hostname
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -185,7 +185,7 @@ ping -c 2 <gateway>
 
 ---
 
-## Q2) Configure Repositories (HTTP / ISO / DVD)
+## Question 2: Configure Repositories (HTTP / ISO / DVD)
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -228,7 +228,7 @@ dnf info bash
 
 ---
 
-## Q3) Make Existing HTTP Content Available on Port 82
+## Question 3: Make Existing HTTP Content Available on Port 82
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -258,7 +258,7 @@ curl http://localhost:82
 
 ---
 
-## Q4) Create Users and Group
+## Question 4: Create Users and Group
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -296,7 +296,7 @@ getent passwd sarah
 
 ---
 
-## Q5) Shared Collaboration Directory with SGID
+## Question 5: Shared Collaboration Directory with SGID
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -326,7 +326,7 @@ ls -ld /common/admin
 
 ---
 
-## Q6) Auto-mount NFS Shares with Timeout
+## Question 6: Auto-mount NFS Shares with Timeout
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -371,7 +371,7 @@ ls /automount/private
 
 ---
 
-## Q7) Cron Job and Deny One User
+## Question 7: Cron Job and Deny One User
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -408,7 +408,7 @@ grep -w natasha /etc/cron.deny
 
 ---
 
-## Q8) ACL on `/var/tmp/fstab`
+## Question 8: ACL on `/var/tmp/fstab`
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -432,7 +432,7 @@ getfacl /var/tmp/fstab
 
 ---
 
-## Q9) Configure NTP Client (Chrony)
+## Question 9: Configure NTP Client (Chrony)
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -464,7 +464,7 @@ timedatectl
 
 ---
 
-## Q10) Find Files Larger Than 4MB and Copy
+## Question 10: Find Files Larger Than 4MB and Copy
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -484,7 +484,7 @@ ls -lh /find/largefiles
 
 ---
 
-## Q11) Create User with Specific UID
+## Question 11: Create User with Specific UID
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -504,7 +504,7 @@ id billy
 
 ---
 
-## Q12) Archive and Compress Directory
+## Question 12: Archive and Compress Directory
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -531,7 +531,7 @@ tar -tJf /root/ex200.tar.xz | head
 
 ---
 
-## Q13) Set UMASK for User
+## Question 13: Set UMASK for User
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -556,7 +556,7 @@ umask
 
 ---
 
-## Q14) Password Expiry Policy for New Users
+## Question 14: Password Expiry Policy for New Users
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -580,7 +580,7 @@ chage -l test
 
 ---
 
-## Q15) Allow `admin` Group Passwordless sudo
+## Question 15: Allow `admin` Group Passwordless sudo
 ⬆️ [Back to top](#table-of-contents)
 
 ### Add via `visudo`
@@ -596,7 +596,7 @@ sudo -l
 
 ---
 
-## Q16) Bash Script Practice
+## Question 16: Bash Script Practice
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal
@@ -626,7 +626,7 @@ ls -l /root/find | head
 
 ---
 
-## Q17) Reset Forgotten Root Password
+## Question 17: Reset Forgotten Root Password
 ⬆️ [Back to top](#table-of-contents)
 
 ### High-level flow
@@ -646,7 +646,7 @@ exec /sbin/init
 
 ---
 
-## Q18) Create 512MB Swap Partition
+## Question 18: Create 512MB Swap Partition
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands (example disk)
@@ -675,7 +675,7 @@ swapon --show
 
 ---
 
-## Q19) Create LVM with Specific Extents
+## Question 19: Create LVM with Specific Extents
 ⬆️ [Back to top](#table-of-contents)
 
 ### Goal (as source style)
@@ -719,7 +719,7 @@ df -h | grep /mnt/database
 
 ---
 
-## Q21) Extend Existing LV by 100 Extents
+## Question 21: Extend Existing LV by 100 Extents
 ⬆️ [Back to top](#table-of-contents)
 
 ### Command
@@ -735,7 +735,7 @@ lvdisplay
 
 ---
 
-## Q22) Enable Recommended tuned Profile
+## Question 22: Enable Recommended tuned Profile
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands
@@ -754,7 +754,7 @@ tuned-adm active
 
 ---
 
-## Q24) Run Script with systemd Timer
+## Question 24: Run Script with systemd Timer
 ⬆️ [Back to top](#table-of-contents)
 
 ### Exam note
@@ -810,7 +810,7 @@ systemctl list-timers | grep testtimer
 
 ---
 
-## Q24 (Flatpak) Configure Flatpak Remote
+## Question 24 (Flatpak): Configure Flatpak Remote
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands
@@ -838,7 +838,7 @@ su - <username> -c "flatpak remotes --user"
 
 ---
 
-## Q25) Script That Prints Second Argument Then First
+## Question 25: Script That Prints Second Argument Then First
 ⬆️ [Back to top](#table-of-contents)
 
 ### Exam note
@@ -872,7 +872,7 @@ test2 test1
 
 ---
 
-## Q26) Add File to All New Users’ Home Directories
+## Question 26: Add File to All New Users’ Home Directories
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands
@@ -890,7 +890,7 @@ ls -l /home/testuser/Congrats
 
 ---
 
-## Q27) Enforce Password Expiry and Minimum Length
+## Question 27: Enforce Password Expiry and Minimum Length
 ⬆️ [Back to top](#table-of-contents)
 
 ### `/etc/login.defs`
@@ -910,7 +910,7 @@ grep -E "PASS_MAX_DAYS|minlen" /etc/login.defs /etc/security/pwquality.conf
 
 ---
 
-## Q28) Passwordless Root SSH from ServerA to ServerB
+## Question 28: Passwordless Root SSH from ServerA to ServerB
 ⬆️ [Back to top](#table-of-contents)
 
 ### On ServerB
