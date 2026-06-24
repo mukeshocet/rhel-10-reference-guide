@@ -5,7 +5,6 @@ My RHEL 10 Reference Guide.
 ## Featured Guide
 
 - [RHCL / RHCSA EX200 Practice Questions (RHEL 10 Style)](./ex200-practice-guide.md)
-- [Medium-Ready Version](./ex200-practice-guide-medium.md)
 - [One-Page Cheatsheet](./ex200-one-page-cheatsheet.md)
 - [Website Home Page](./index.md)
 
