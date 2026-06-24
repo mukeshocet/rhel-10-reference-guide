@@ -3,7 +3,7 @@
 Use this page for fast revision before practice sessions.
 
 > Quick links:
-> [Detailed Guide](./ex200-practice-guide.md) | [Medium Guide](./ex200-practice-guide-medium.md) | [Home](./index.md)
+> [Detailed Guide](./ex200-practice-guide.md) | [Home](./index.md)
 
 ---
 

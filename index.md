@@ -9,12 +9,11 @@ Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX2
 ## Start Here
 
 - [EX200 Practice Guide (Detailed)](./ex200-practice-guide.md)
-- [EX200 Practice Guide (Medium Ready)](./ex200-practice-guide-medium.md)
 - [EX200 One-Page Cheatsheet](./ex200-one-page-cheatsheet.md)
 
 **Start Practice Buttons:**
 
-[![Start in 10 Minutes](https://img.shields.io/badge/Start-10_Min_Track-success)](./ex200-practice-guide-medium.md#quick-start)
+[![Start in 10 Minutes](https://img.shields.io/badge/Start-10_Min_Track-success)](./ex200-practice-guide.md#question-4-create-users-and-group)
 [![Start Exam-Critical Track](https://img.shields.io/badge/Start-Exam--Critical_Track-important)](./ex200-practice-guide.md#practice-planner-difficulty--time)
 [![Open One-Page Cheatsheet](https://img.shields.io/badge/Open-One--Page_Cheatsheet-blue)](./ex200-one-page-cheatsheet.md)
 
@@ -35,11 +34,11 @@ Practical and beginner-friendly Linux study material focused on RHCL / RHCSA EX2
 ## Most Useful Pages for Learners
 
 - [Detailed guide with verification + FAQ](./ex200-practice-guide.md)
-- [Short guide for quick revisions](./ex200-practice-guide-medium.md)
+- [One-page cheatsheet for quick revisions](./ex200-one-page-cheatsheet.md)
 
 ## Learning Path by Time
 
-- **10 minutes:** revise 1 beginner section from the Medium guide
+- **10 minutes:** revise 1 beginner section from the one-page cheatsheet
 - **30 minutes:** complete one topic group (for example users + permissions)
 - **60+ minutes:** simulate mini-exam with 4-6 mixed tasks
 
