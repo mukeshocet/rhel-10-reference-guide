@@ -44,11 +44,11 @@ Each section is independent, so you can revise fast even when you only have 10-1
 - [Question 21: Extend LV by 100 Extents](#question-21-extend-lv-by-100-extents)
 - [Question 22: tuned Profile](#question-22-tuned-profile)
 - [Question 24: systemd Timer](#question-24-systemd-timer)
-- [Question 24: Flatpak Remote](#question-24-flatpak-remote)
-- [Question 25: Script Argument Order](#question-25-script-argument-order)
-- [Question 26: Default File for New Users](#question-26-default-file-for-new-users)
-- [Question 27: Password Policy](#question-27-password-policy)
-- [Question 28: Passwordless Root SSH (Lab Scenario)](#question-28-passwordless-root-ssh-lab-scenario)
+- [Question 25: Flatpak Remote](#question-25-flatpak-remote)
+- [Question 26: Script Argument Order](#question-26-script-argument-order)
+- [Question 27: Default File for New Users](#question-27-default-file-for-new-users)
+- [Question 28: Password Policy](#question-28-password-policy)
+- [Question 29: Passwordless Root SSH (Lab Scenario)](#question-29-passwordless-root-ssh-lab-scenario)
 - [RHEL 9 Only) Containers with Podman](#rhel-9-only-containers-with-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 
@@ -69,7 +69,7 @@ Each section is independent, so you can revise fast even when you only have 10-1
 | Users/Permissions/ACL (Question 4-Question 8) | 🔴 | ⏱️ 30-40 min |
 | Time/Find/Archive/Policy (Question 9-Question 15) | 🟡 | ⏱️ 35-50 min |
 | Scripting/Recovery/Storage (Question 16-Question 21) | 🔴 | ⏱️ 45-60 min |
-| tuned/systemd/flatpak/SSH (Question 22-Question 28) | 🟡 | ⏱️ 35-45 min |
+| tuned/systemd/flatpak/SSH (Question 22-Question 29) | 🟡 | ⏱️ 35-45 min |
 
 ---
 
@@ -400,7 +400,7 @@ systemctl enable --now testtimer.timer
 
 ---
 
-## Question 24: Flatpak Remote
+## Question 25: Flatpak Remote
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -416,7 +416,7 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 
 ---
 
-## Question 25: Script Argument Order
+## Question 26: Script Argument Order
 ⬆️ [Back to top](#jump-to-topic)
 
 Optional: this exact pattern is unlikely to appear in the exam. Actual exam script tasks are generally easier.
@@ -433,7 +433,7 @@ fi
 
 ---
 
-## Question 26: Default File for New Users
+## Question 27: Default File for New Users
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
@@ -443,7 +443,7 @@ chmod 644 /etc/skel/Congrats
 
 ---
 
-## Question 27: Password Policy
+## Question 28: Password Policy
 ⬆️ [Back to top](#jump-to-topic)
 
 `/etc/login.defs`
@@ -458,7 +458,7 @@ minlen = 8
 
 ---
 
-## Question 28: Passwordless Root SSH (Lab Scenario)
+## Question 29: Passwordless Root SSH (Lab Scenario)
 ⬆️ [Back to top](#jump-to-topic)
 
 ```bash
