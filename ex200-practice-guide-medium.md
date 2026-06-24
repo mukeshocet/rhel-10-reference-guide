@@ -385,6 +385,8 @@ tuned-adm active
 ## 24) systemd Timer
 ⬆️ [Back to top](#jump-to-topic)
 
+Exam note: often you are told to install a lookup RPM first; it usually drops the required script in the target directory mentioned in the task.
+
 ```ini
 [Timer]
 OnCalendar=hourly
