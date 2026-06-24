@@ -48,11 +48,11 @@
 - [Question 21: Extend Existing LV by 100 Extents](#question-21-extend-existing-lv-by-100-extents)
 - [Question 22: Enable Recommended tuned Profile](#question-22-enable-recommended-tuned-profile)
 - [Question 24: Run Script with systemd Timer](#question-24-run-script-with-systemd-timer)
-- [Question 24 (Flatpak): Configure Flatpak Remote](#question-24-flatpak-configure-flatpak-remote)
-- [Question 25: Script That Prints Second Argument Then First](#question-25-script-that-prints-second-argument-then-first)
-- [Question 26: Add File to All New Users’ Home Directories](#question-26-add-file-to-all-new-users-home-directories)
-- [Question 27: Enforce Password Expiry and Minimum Length](#question-27-enforce-password-expiry-and-minimum-length)
-- [Question 28: Passwordless Root SSH from ServerA to ServerB](#question-28-passwordless-root-ssh-from-servera-to-serverb)
+- [Question 25: Configure Flatpak Remote](#question-25-configure-flatpak-remote)
+- [Question 26: Script That Prints Second Argument Then First](#question-26-script-that-prints-second-argument-then-first)
+- [Question 27: Add File to All New Users’ Home Directories](#question-27-add-file-to-all-new-users-home-directories)
+- [Question 28: Enforce Password Expiry and Minimum Length](#question-28-enforce-password-expiry-and-minimum-length)
+- [Question 29: Passwordless Root SSH from ServerA to ServerB](#question-29-passwordless-root-ssh-from-servera-to-serverb)
 - [RHEL 9 Only) Container-Based Questions (Podman)](#rhel-9-only-container-based-questions-podman)
 - [Quick Revision Checklist](#quick-revision-checklist)
 - [Exam-Day Fast Checklist (Printable)](#exam-day-fast-checklist-printable)
@@ -96,11 +96,11 @@
 | Question 21 | LVM extend | 🔴 Exam-Critical | ⏱️ 6-10 min |
 | Question 22 | tuned | 🟢 Beginner | ⏱️ 4-6 min |
 | Question 24 | systemd timer | 🟡 Intermediate | ⏱️ 10-15 min |
-| Question 24 (Flatpak) | flatpak remote | 🟢 Beginner | ⏱️ 4-6 min |
-| Question 25 | argument script | 🟢 Beginner | ⏱️ 5-8 min |
-| Question 26 | /etc/skel | 🟢 Beginner | ⏱️ 4-6 min |
-| Question 27 | password policy | 🟡 Intermediate | ⏱️ 6-10 min |
-| Question 28 | SSH key login | 🔴 Exam-Critical | ⏱️ 8-12 min |
+| Question 25 | flatpak remote | 🟢 Beginner | ⏱️ 4-6 min |
+| Question 26 | argument script | 🟢 Beginner | ⏱️ 5-8 min |
+| Question 27 | /etc/skel | 🟢 Beginner | ⏱️ 4-6 min |
+| Question 28 | password policy | 🟡 Intermediate | ⏱️ 6-10 min |
+| Question 29 | SSH key login | 🔴 Exam-Critical | ⏱️ 8-12 min |
 
 ---
 
@@ -810,7 +810,7 @@ systemctl list-timers | grep testtimer
 
 ---
 
-## Question 24 (Flatpak): Configure Flatpak Remote
+## Question 25: Configure Flatpak Remote
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands
@@ -838,7 +838,7 @@ su - <username> -c "flatpak remotes --user"
 
 ---
 
-## Question 25: Script That Prints Second Argument Then First
+## Question 26: Script That Prints Second Argument Then First
 ⬆️ [Back to top](#table-of-contents)
 
 ### Exam note
@@ -872,7 +872,7 @@ test2 test1
 
 ---
 
-## Question 26: Add File to All New Users’ Home Directories
+## Question 27: Add File to All New Users’ Home Directories
 ⬆️ [Back to top](#table-of-contents)
 
 ### Commands
@@ -890,7 +890,7 @@ ls -l /home/testuser/Congrats
 
 ---
 
-## Question 27: Enforce Password Expiry and Minimum Length
+## Question 28: Enforce Password Expiry and Minimum Length
 ⬆️ [Back to top](#table-of-contents)
 
 ### `/etc/login.defs`
@@ -910,7 +910,7 @@ grep -E "PASS_MAX_DAYS|minlen" /etc/login.defs /etc/security/pwquality.conf
 
 ---
 
-## Question 28: Passwordless Root SSH from ServerA to ServerB
+## Question 29: Passwordless Root SSH from ServerA to ServerB
 ⬆️ [Back to top](#table-of-contents)
 
 ### On ServerB

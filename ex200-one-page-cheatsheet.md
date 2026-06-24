@@ -222,7 +222,7 @@ systemctl enable --now testtimer.timer
 systemctl list-timers
 ```
 
-## Question 24: flatpak
+## Question 25: flatpak
 
 ```bash
 dnf install -y flatpak
@@ -235,9 +235,7 @@ su - <username>
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-## Question 25: reverse args script
-
-Optional practice; exam scripts are usually easier and may not use this exact pattern.
+## Question 26: reverse args script
 
 Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
@@ -245,21 +243,21 @@ Optional practice; exam scripts are usually easier and may not use this exact pa
 if [ $# -eq 2 ]; then echo "$2 $1"; else echo "Usage: $0 argument1 argument2"; exit 1; fi
 ```
 
-## Question 26: /etc/skel file
+## Question 27: /etc/skel file
 
 ```bash
 touch /etc/skel/Congrats
 chmod 644 /etc/skel/Congrats
 ```
 
-## Question 27: password policy
+## Question 28: password policy
 
 `/etc/security/pwquality.conf`
 ```text
 minlen = 8
 ```
 
-## Question 28: SSH key login
+## Question 29: SSH key login
 
 ```bash
 ssh-keygen
