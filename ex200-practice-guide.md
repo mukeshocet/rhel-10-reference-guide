@@ -127,6 +127,8 @@
 
 - Practice on lab VMs (for example: `node1.domain.com`, `node2.domain.com`)
 - Use root or `sudo` access where needed
+- In real exams, direct SSH login as `root` is typically not allowed.
+- For easier copy/paste workflow, create a normal test user on both nodes, SSH with that user, then switch to root with `su - root`.
 - Read each question first, then run commands carefully
 - In real exams, names, IPs, and passwords can be different
 
