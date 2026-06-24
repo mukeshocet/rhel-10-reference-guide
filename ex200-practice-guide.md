@@ -757,6 +757,9 @@ tuned-adm active
 ## Q24) Run Script with systemd Timer
 ⬆️ [Back to top](#table-of-contents)
 
+### Exam note
+In many exam variants, you may first be asked to install a lookup RPM. That package usually places the required lookup script(s) in the expected directory, so use the provided script path from the question.
+
 ### Script
 `/usr/local/testtimer.sh`
 ```bash

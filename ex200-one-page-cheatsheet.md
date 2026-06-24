@@ -212,6 +212,8 @@ tuned-adm active
 
 ## 24) systemd timer
 
+Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
+
 ```bash
 systemctl daemon-reload
 systemctl enable --now testtimer.timer
