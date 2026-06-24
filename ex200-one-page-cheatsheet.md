@@ -239,8 +239,6 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 
 Optional practice; exam scripts are usually easier and may not use this exact pattern.
 
-Optional practice; exam scripts are usually easier and may not use this exact pattern.
-
 ```bash
 if [ $# -eq 2 ]; then echo "$2 $1"; else echo "Usage: $0 argument1 argument2"; exit 1; fi
 ```
