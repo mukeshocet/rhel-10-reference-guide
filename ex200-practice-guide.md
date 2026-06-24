@@ -1055,6 +1055,7 @@ loginctl show-user harry | grep Linger
 - **ACL**: checking with `ls -l` instead of `getfacl`
 - **LVM/Swap**: forgot `/etc/fstab` entry for persistence
 - **systemd timer**: created unit files but forgot `systemctl daemon-reload`
+- **Exam workflow**: for easier copy/paste, create a normal test user on both nodes, SSH with that user, then switch to root with `su - root`
 
 ---
 
