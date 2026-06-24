@@ -758,6 +758,9 @@ tuned-adm active
 ⬆️ [Back to top](#table-of-contents)
 
 ### Exam note
+RHEL 10 only: this question is targeted for RHEL 10 exam preparation.
+
+### Task note
 In many exam variants, you may first be asked to install a lookup RPM. That package usually places the required lookup script(s) in the expected directory, so use the provided script path from the question.
 
 ### Script
@@ -812,6 +815,9 @@ systemctl list-timers | grep testtimer
 
 ## Question 25: Configure Flatpak Remote
 ⬆️ [Back to top](#table-of-contents)
+
+### Exam note
+RHEL 10 only: this question is targeted for RHEL 10 exam preparation.
 
 ### Commands
 ```bash
