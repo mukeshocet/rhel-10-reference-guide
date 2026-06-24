@@ -385,6 +385,8 @@ tuned-adm active
 ## Question 24: systemd Timer
 ⬆️ [Back to top](#jump-to-topic)
 
+Exam scope note: RHEL 10 only.
+
 Exam note: often you are told to install a lookup RPM first; it usually drops the required script in the target directory mentioned in the task.
 
 ```ini
@@ -402,6 +404,8 @@ systemctl enable --now testtimer.timer
 
 ## Question 25: Flatpak Remote
 ⬆️ [Back to top](#jump-to-topic)
+
+Exam scope note: RHEL 10 only.
 
 ```bash
 dnf install -y flatpak

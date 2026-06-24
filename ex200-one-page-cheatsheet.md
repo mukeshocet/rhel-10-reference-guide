@@ -212,7 +212,7 @@ tuned-adm active
 
 ## Question 24: systemd timer
 
-Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
+Exam scope note: RHEL 10 only.
 
 Exam note: install lookup RPM first if instructed; it usually places the script in the required directory.
 
@@ -223,6 +223,8 @@ systemctl list-timers
 ```
 
 ## Question 25: flatpak
+
+Exam scope note: RHEL 10 only.
 
 ```bash
 dnf install -y flatpak
